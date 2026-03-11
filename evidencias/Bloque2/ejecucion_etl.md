@@ -56,6 +56,32 @@ siguiente consulta SQL en PostgreSQL:
 ```sql
 SELECT COUNT(*)
 FROM staging.stg_res_partner;
+```
 Resultado obtenido:
 49
 Esto confirma que los registros fueron cargados correctamente en la tabla de destino.
+# 5. Revisión de errores
+Durante la ejecución del pipeline se revisaron los logs de Apache Hop.
+Elementos verificados:
+- errores de conexión a la base de datos
+- errores en transformaciones
+- errores de inserción en la tabla destino
+Resultado observado:
+No errors detected
+El pipeline se ejecutó correctamente
+# 6. Evidencias de ejecución
+Durante la ejecución del proceso se obtuvieron las siguientes evidencias:
+- panel de ejecución del pipeline
+- registros procesados por cada transformación
+- mensaje final de ejecución correcta
+- verificación de datos en la base de datos
+Estas evidencias permiten confirmar que el proceso ETL se ejecutó
+correctamente.
+# 7. Conclusión
+El pipeline P02_transport_data.hpl fue ejecutado correctamente en Apache Hop.
+El proceso permitió:
+- extraer datos desde el ERP Odoo
+- aplicar transformaciones de limpieza y normalización
+- cargar los datos en el esquema staging del almacén de datos
+El número de registros procesados coincide con los datos insertados en la
+tabla destino, lo que confirma el correcto funcionamiento del flujo ETL.
